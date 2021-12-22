@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assume the role of a Telegram Bot">
+    <link rel="icon" type="image/x-icon" href="img/favicon.gif">
+    <title>Isla</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <select name="chat" id="chat-select">
+        <option id="temp-chat-option">Select Chat</option>
+    </select>
+    <div id="main-container">
+    </div>
+    <div id="sent-container"></div>
+    <div id="temp-container"></div>
+    <form id="message-form">
+        <input id="message-input" placeholder="Select a chat to start messaging">
+        <input id="send-btn" type="submit" value="Send">
+    </form>
+</body>
+
+</html>

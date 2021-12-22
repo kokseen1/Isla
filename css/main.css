@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#chat-select {
+    background-color: black;
+    color: chartreuse;
+}
+
+#main-container {
+    height: calc(100% - 50px);
+    width: calc(50% - 5px);
+    position: absolute;
+    left: 0;
+    overflow-y: scroll;
+}
+
+#sent-container {
+    height: calc(100% - 50px);
+    width: calc(50% - 5px);
+    position: absolute;
+    right: 0;
+    margin-left: 100px;
+    overflow-y: scroll;
+}
+
+#message-form {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#message-input {
+    background-color: black;
+    color: chartreuse;
+    width: calc(100% - 65px);
+    border: transparent;
+    outline: none;
+}
+
+#temp-container {
+    display: none;
+}
+
+#send-btn {
+    background-color: black;
+    color: chartreuse;
+}
+
+.text-message {
+    margin: 0;
+    color: chartreuse;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
