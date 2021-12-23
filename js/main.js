@@ -31,17 +31,17 @@ function retrieve_messages() {
 }
 
 
-$(document).on('change', '#chat-select', function () {
-    current_chat_id = $("#chat-select option:selected").val();
-    $("#message-input").attr("placeholder", `Send a message to ${$("#chat-select option:selected").text()}`);
-    $("#temp-chat-option").remove();
-});
-
-
 $(document).ready(function () {
     let interval_id = window.setInterval(function () {
         retrieve_messages();
     }, 1000);
+
+    $(document).on('change', '#chat-select', function () {
+        current_chat_id = $("#chat-select option:selected").val();
+        $("#message-input").attr("placeholder", `Send a message to ${$("#chat-select option:selected").text()}`);
+        $("#temp-chat-option").remove();
+    });
+
     $("#message-form").submit(function (event) {
         event.preventDefault();
         if (!current_chat_id) {
@@ -56,6 +56,14 @@ $(document).ready(function () {
         $("#message-input").val("");
     });
 
+    $("#custom-chat-btn").click(function(){
+        let custom_chat_id = prompt("Enter chat ID", "");
+        let custom_chat_name = prompt("Enter chat name", "");
+        $('#chat-select').append($('<option>', {
+            value: custom_chat_id,
+            text: custom_chat_name
+        }));
+      });
 
     $(document).on("keydown", function (e) {
         if (!$("#message-input").is(":focus"))

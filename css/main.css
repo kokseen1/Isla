@@ -45,7 +45,7 @@ html, body {
     display: none;
 }
 
-#send-btn {
+button,input {
     background-color: black;
     color: chartreuse;
 }
