@@ -8,6 +8,7 @@ function retrieve_messages() {
         $("#temp-container").html("");
         data.result.forEach(e => {
             let chat_name = "";
+            if (!e.message) return;
             let last_name = e.message.from.last_name ? e.message.from.last_name : ""
             let first_name = e.message.from.first_name ? e.message.from.first_name : ""
             if (first_name && last_name) first_name += " ";
